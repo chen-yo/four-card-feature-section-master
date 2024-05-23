@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-weight-light: 200;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+
+  --clr-netural-900: hsl(234, 12%, 34%);
+  --clr-netural-400: hsl(229, 6%, 66%);
+  --clr-netural-100: hsl(0, 0%, 98%);
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--clr-netural-100);
+  font-family: "Poppins", sans-serif;
+  font-weight: var(--font-weight-regular);
+  font-size: 1.5rem;
+  color: var(--clr-netural-400);
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  color: var(--clr-netural-900);
+  font-weight: var(--font-weight-bold);
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 8rem 3rem;
+}
+
+.header {
+  text-align: center;
+  max-width: 500px;
+  margin-bottom: 6rem;
+  margin-inline: auto;
+}
+
+.header__title {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-light);
+}
+
+.header__by {
+  font-weight: var(--font-weight-bold);
+}
+
+.cards {
+  --gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.cards > * {
+  flex: 1;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+
+  background-color: var(--clr-netural-100);
+  box-shadow: 2px 4px 11px 2px hsla(231, 48%, 48%, 0.2);
+  border-radius: 5px;
+  padding: 3rem;
+  --border-top: 4px;
+}
+
+.card__image {
+  margin-top: 3rem;
+  display: block;
+  align-self: flex-end;
+}
+
+.card--border-top-red {
+  border-top: var(--border-top) solid var(--clr-red);
+}
+.card--border-top-cyan {
+  border-top: var(--border-top) solid var(--clr-cyan);
+}
+.card--border-top-orange {
+  border-top: var(--border-top) solid var(--clr-orange);
+}
+.card--border-top-blue {
+  border-top: var(--border-top) solid var(--clr-blue);
+}
+
+@media (min-width: 600px) {
+  .header__title {
+    font-size: 4rem;
+  }
+  .cards {
+    flex-direction: row;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
